@@ -1,0 +1,112 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Scotiabank</title>
+
+    <!-- Bootstrap -->
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <style>
+    
+  body{
+    background-color: rgb(232,230,222);
+  }
+
+  .well{
+    background-color: rgb(217,237,247);
+  }
+
+  table{
+    width: 100%;
+  }
+
+  .form-control{
+    width: 40%;
+  }
+
+
+  </style>
+
+  </head>
+  <body>
+
+   
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12"  style="background-color: red;">
+            <ul class="nav navbar-nav">
+              <div style="color: white; font-size: 20px; margin-top:15px;">Completa tus Datos</div>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <img src="{% static 'images/scotiabank-logo.jpg' %}" style="width:30%; float:right">
+            </ul>
+          </div>
+          <div>
+            <div class="col-lg-12" style="background-color: white;">                                       
+            <form>
+              <table>
+                <tr>
+                  <td><strong>Nombre Completo:</strong><input type="text" placeholder="Ej:Pedro Perez" class="form-control" required pattern="[A-Za-z]+*"></td><br>
+                  <td><strong>Región:</strong>
+                    <select class="form-control" placeholder="Seleccione Región" required>
+                      <option value="XV de Arica y Parinacota">XV de Arica y Parinacota</option>
+                      <option value="I de Tarapacá">I de Tarapacá</option>
+                      <option value="II de Antofagasta">II de Antofagasta</option>
+                      <option value="III de Atacama">III de Atacama</option>
+                      <option value="IV de Coquimbo">IV de Coquimbo</option>
+                      <option value="V de Valparaíso">V de Valparaíso</option>
+                      <option value="VI del Libertador General Bernardo O'Higgins">VI del Libertador General Bernardo O'Higgins</option>
+                      <option value="VII del Maule">VII del Maule</option>
+                      <option value="VIII del Bío Bío">VIII del Bío Bío</option>
+                      <option value="IX de la Araucanía">IX de la Araucanía</option>
+                      <option value="XIV de los Ríos">XIV de los Ríos</option>
+                      <option value="X de los Lagos">X de los Lagos</option>
+                      <option value="XI Aisén del General Carlos Ibáñez del Campo">XI Aisén del General Carlos Ibáñez del Campo</option>
+                      <option value="XII de Magallanes y Antártica Chilena">XII de Magallanes y Antártica Chilena</option>
+                      <option value="Metropolitana de Santiago">Metropolitana de Santiago</option>
+                    </select></td>
+                </tr>
+                <tr>
+                  <td><br><strong>Teléfono:</strong><input class="form-control" type="tel" placeholder="Ej:955555555" required pattern="[0-9]{9}" title="9 caracteres"></td>
+                  <td><br><strong>Comuna:</strong><select class="form-control" required>
+                    <option value="Ñuñoa">Ñuñoa</option>
+                  </select></td>
+                </tr>
+                <tr>
+                  <td><br><strong>E-mail:</strong> <br> <input class="form-control" type="email" placeholder="Ej:nombre@ejemplo.com" required></td>
+                </tr>
+              </table>
+              <br><br>
+              <div style="text-align:center;"><button style="background-color: red; color: white; width: 20em;" type="submit" class="btn btn-default">GUARDAR</button></div>
+              </form>
+              <br><br>
+            </div>
+          </div>
+        </div>
+      </div>  
+    
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+  </body>
+</html>
